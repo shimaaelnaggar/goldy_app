@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:goldy/core/constants/app_colors.dart';
+import 'package:goldy/core/constants/app_icons.dart';
 import 'package:goldy/core/constants/app_strings.dart';
+import 'package:goldy/core/presentation/widgets/animated_header.dart';
 import 'package:goldy/core/presentation/widgets/custom_button.dart';
 
 class HomeView extends StatelessWidget {
@@ -9,10 +11,17 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const AnimatedHeader(
+            icon: AppIcons.trending,
+            title: AppStrings.animatedTitle,
+            subtitle: AppStrings.animatedSubtitle,
+          ),
+
+          const SizedBox(height: 40),
           CustomButton(
             onTap: () {},
             text: AppStrings.gold,
