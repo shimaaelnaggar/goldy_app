@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:goldy/core/data/api/api_constants.dart';
+import 'package:goldy/core/api/api_constants.dart';
 
 class DioHelper {
   static late Dio dio;
@@ -14,10 +14,10 @@ class DioHelper {
   }
 
   static Future<Response> getData({
-    required String url,
+    required String endpoint,
     Map<String, dynamic>? query,
   }) async {
-    final res = await dio.get(url, queryParameters: query);
+    final res = await dio.get(endpoint, queryParameters: query);
     return res;
   }
 }

@@ -4,6 +4,7 @@ import 'package:goldy/core/constants/app_icons.dart';
 import 'package:goldy/core/constants/app_strings.dart';
 import 'package:goldy/core/presentation/widgets/animated_header.dart';
 import 'package:goldy/core/presentation/widgets/custom_button.dart';
+import 'package:goldy/core/routing/routes.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -23,7 +24,9 @@ class HomeView extends StatelessWidget {
 
           const SizedBox(height: 40),
           CustomButton(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, AppRoutes.gold);
+            },
             text: AppStrings.gold,
             buttonColor: AppColors.goldColor,
           ),
