@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goldy/core/constants/app_colors.dart';
 import 'package:goldy/core/constants/app_images.dart';
 import 'package:goldy/core/constants/app_strings.dart';
+import 'package:goldy/core/widgets/custom_app_bar.dart';
 import 'package:goldy/core/widgets/custom_text.dart';
 import 'package:goldy/features/gold/data/repository/gold_repository.dart';
 import 'package:goldy/features/gold/presentation/cubit/gold_cubit.dart';
@@ -17,14 +18,9 @@ class GoldView extends StatelessWidget {
       create: (context) => GoldCubit(GoldRepository())..fetchGold(),
       child: Scaffold(
         backgroundColor: AppColors.backgroundColor,
-        appBar: AppBar(
-          backgroundColor: AppColors.appbarColor,
-          title: Center(
-            child: CustomText(
-              text: AppStrings.goldappbar,
-              color: AppColors.goldColor,
-            ),
-          ),
+        appBar: CustomAppBar(
+          title: AppStrings.goldappbar,
+          titleColor: AppColors.goldColor,
         ),
         body: Center(
           child: BlocBuilder<GoldCubit, GoldState>(

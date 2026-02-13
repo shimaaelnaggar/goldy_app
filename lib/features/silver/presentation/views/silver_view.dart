@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goldy/core/constants/app_colors.dart';
 import 'package:goldy/core/constants/app_images.dart';
 import 'package:goldy/core/constants/app_strings.dart';
+import 'package:goldy/core/widgets/custom_app_bar.dart';
 import 'package:goldy/core/widgets/custom_text.dart';
 import 'package:goldy/features/silver/data/repository/silver_repository.dart';
 import 'package:goldy/features/silver/presentation/cubit/silver_cubit.dart';
@@ -18,14 +19,9 @@ class SilverView extends StatelessWidget {
       create: (context) => SilverCubit(SilverRepository())..fetchSilver(),
       child: Scaffold(
         backgroundColor: AppColors.backgroundColor,
-        appBar: AppBar(
-          backgroundColor: AppColors.appbarColor,
-          title: Center(
-            child: CustomText(
-              text: AppStrings.silverappbar,
-              color: AppColors.silverColor,
-            ),
-          ),
+        appBar: CustomAppBar(
+          title: AppStrings.silverappbar,
+          titleColor: AppColors.silverColor,
         ),
         body: Center(
           child: BlocBuilder<SilverCubit, SilverState>(
