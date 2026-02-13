@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goldy/core/constants/app_colors.dart';
 import 'package:goldy/core/constants/app_images.dart';
 import 'package:goldy/core/constants/app_strings.dart';
-import 'package:goldy/core/presentation/widgets/custom_text.dart';
+import 'package:goldy/core/widgets/custom_text.dart';
 import 'package:goldy/features/silver/data/repository/silver_repository.dart';
 import 'package:goldy/features/silver/presentation/cubit/silver_cubit.dart';
-import 'package:goldy/core/presentation/widgets/metal_details_bottom_sheet.dart';
+import 'package:goldy/core/widgets/metal_details_bottom_sheet.dart';
 import 'package:goldy/features/silver/presentation/cubit/silver_state.dart';
 
 class SilverView extends StatelessWidget {

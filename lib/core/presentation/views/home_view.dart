@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:goldy/core/constants/app_colors.dart';
 import 'package:goldy/core/constants/app_icons.dart';
 import 'package:goldy/core/constants/app_strings.dart';
-import 'package:goldy/core/presentation/widgets/animated_header.dart';
-import 'package:goldy/core/presentation/widgets/custom_button.dart';
+import 'package:goldy/core/widgets/animated_header.dart';
+import 'package:goldy/core/widgets/custom_button.dart';
 import 'package:goldy/core/routing/routes.dart';
 
 class HomeView extends StatelessWidget {
