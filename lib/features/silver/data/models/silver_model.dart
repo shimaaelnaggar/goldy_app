@@ -1,30 +1,27 @@
-import 'package:goldy/core/models/metal_model.dart';
+import 'package:goldy/core/models/metal_model.dart' show MetalModel;
 
-class GoldModel implements MetalModel {
+class SilverModel implements MetalModel {
   @override
   final String name;
   @override
   final double price;
   @override
   final String symbol;
-  final String updatedAt;
   @override
   final String updatedAtReadable;
 
-  GoldModel({
+  SilverModel({
     required this.name,
     required this.price,
     required this.symbol,
-    required this.updatedAt,
     required this.updatedAtReadable,
   });
 
-  factory GoldModel.fromJson(Map<String, dynamic> json) {
-    return GoldModel(
+  factory SilverModel.fromJson(Map<String, dynamic> json) {
+    return SilverModel(
       name: json['name'] ?? '',
       price: (json['price'] as num?)?.toDouble() ?? 0.0,
       symbol: json['symbol'] ?? '',
-      updatedAt: json['updatedAt'] ?? '',
       updatedAtReadable: json['updatedAtReadable'] ?? '',
     );
   }

@@ -4,12 +4,12 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
 import 'package:goldy/features/gold/data/models/gold_model.dart';
-import 'package:goldy/features/gold/data/repository/gold_rebository.dart';
+import 'package:goldy/features/gold/data/repository/gold_repository.dart';
 
 part 'gold_state.dart';
 
 class GoldCubit extends Cubit<GoldState> {
-  final GoldRebository goldRebository;
+  final GoldRepository goldRebository;
   GoldCubit(this.goldRebository) : super(GoldInitial());
 
   Future<void> fetchGold() async {

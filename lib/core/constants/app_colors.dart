@@ -6,4 +6,5 @@ class AppColors {
   static const Color backgroundColor = Colors.black;
   static final Color? appbarColor = Colors.grey[850];
   static const Color textColor = Colors.grey;
+  static const Color errorColor = Colors.redAccent;
 }

@@ -32,7 +32,9 @@ class HomeView extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           CustomButton(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, AppRoutes.silver);
+            },
             text: AppStrings.silver,
             buttonColor: AppColors.silverColor,
           ),
